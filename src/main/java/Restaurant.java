@@ -69,4 +69,8 @@ public class Restaurant {
         return name;
     }
 
+// Returns the total order value using list of items provided
+    public int TotalCostOfItems(List<String> items) {
+        return 0;
+    }
 }
