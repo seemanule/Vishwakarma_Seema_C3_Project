@@ -69,8 +69,21 @@ public class Restaurant {
         return name;
     }
 
+    // Assuming all items added in cart will be present and in stock with the restaurant
+    private int getItemValue(String item) {
+        for (int i=0; i<menu.size(); i++) {
+            if (menu.get(i).getName() == item) {
+                return menu.get(i).getPrice();
+            }
+        }
+        return 0;
+    }
 // Returns the total order value using list of items provided
     public int TotalCostOfItems(List<String> items) {
-        return 0;
+        int orderValue = 0;
+        for (int i=0; i<items.size(); i++) {
+            orderValue += getItemValue(items.get(i));
+        }
+        return orderValue;
     }
 }

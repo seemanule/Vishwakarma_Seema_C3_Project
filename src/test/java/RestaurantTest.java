@@ -77,6 +77,7 @@ class RestaurantTest {
     }
 
     //Test Case for Total Order Value
+    //Passing Test Case
     @Test
     public void selecting_items_should_return_total_value(){
         restaurant.addToMenu("Sweet corn soup",119);
